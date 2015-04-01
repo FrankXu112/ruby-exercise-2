@@ -1,7 +1,8 @@
-grocery_list = ["carrots", "toilet paper", "apples", "rice"]
-grocery_list.each do |n|
-	puts "*#{n}"
-end
+grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
+grocery_list.each {|n| puts "*#{n}"}
+
+grocery_list.push("rice")
+grocery_list.each {|n| puts "*#{n}"}
 
 puts grocery_list.count
 
@@ -17,6 +18,7 @@ def alphabetize(arr, rev=false)
 	arr.sort!
 end
 alphabetize(grocery_list)
-grocery_list.each do |n|
-	puts "*#{n}"
-end
+grocery_list.each {|n| puts "*#{n}"}
+
+grocery_list.delete("salmon")
+grocery_list.each {|n| puts "*#{n}"}
